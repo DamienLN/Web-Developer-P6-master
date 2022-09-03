@@ -2,7 +2,6 @@ const express = require('express');
 const mongoose = require('mongoose');
 const path = require('path');
 const cors = require('cors')
-
 const rateLimit = require("express-rate-limit")
 // Routes //
 const userRoutes = require('./routes/user');
@@ -21,7 +20,6 @@ const limiter = rateLimit({
   message: "Trop de tentatives de connexion. Compte bloqué pour 5 minutes"
 })
 
-
 // Lancement d express //
 const app = express();
 
@@ -39,11 +37,6 @@ app.use(express.json());
 // Lancement des routes //
 app.use('/api/sauces', sauceRoutes);
 app.use('/api/auth', userRoutes);
-
-
-
-
-
 
 module.exports = app;
 

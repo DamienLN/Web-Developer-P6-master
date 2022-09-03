@@ -36,7 +36,6 @@ exports.createSauce = (req, res, next) => {
 
 };
 
-
 // ===== Modifier une sauce ===== //
 exports.modifySauce = (req, res, next) => {
 
